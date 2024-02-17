@@ -2,18 +2,16 @@ package com.todocode.ap.login.igu;
 
 import com.todocode.ap.login.logica.Controladora;
 
-
 public class Principal extends javax.swing.JFrame {
-
+    
     Controladora control = null;
-   
+    
     public Principal() {
         this.control = new Controladora();
         initComponents();
         setLocationRelativeTo(null);
     }
-
-   
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -61,6 +59,11 @@ public class Principal extends javax.swing.JFrame {
         btnLogin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnLogin.setForeground(new java.awt.Color(255, 255, 255));
         btnLogin.setText("Login");
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginActionPerformed(evt);
+            }
+        });
 
         btnLimpiar.setBackground(new java.awt.Color(51, 51, 51));
         btnLimpiar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -153,13 +156,24 @@ public class Principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //BOTON LIMPIAR
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
         txtUsuario.setText("");
         txtContrasenia.setText("");
         txtCampo.setText("");
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
-    
+    //BOTON LOGIN
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        
+        String usuario = txtUsuario.getText();
+        String contra = txtContrasenia.getText();
+        
+        String mensaje = control.validarUsuario(usuario, contra);
+        
+        txtCampo.setText(mensaje);
+    }//GEN-LAST:event_btnLoginActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLimpiar;
