@@ -1,10 +1,14 @@
 package com.todocode.ap.login.igu;
 
+import com.todocode.ap.login.logica.Controladora;
+
 
 public class Principal extends javax.swing.JFrame {
 
+    Controladora control = null;
    
     public Principal() {
+        this.control = new Controladora();
         initComponents();
         setLocationRelativeTo(null);
     }
