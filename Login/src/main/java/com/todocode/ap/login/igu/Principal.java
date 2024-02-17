@@ -6,6 +6,7 @@ public class Principal extends javax.swing.JFrame {
    
     public Principal() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
    
@@ -49,6 +50,12 @@ public class Principal extends javax.swing.JFrame {
         txtContrasenia.setBackground(new java.awt.Color(255, 255, 255));
         txtContrasenia.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtContrasenia.setForeground(new java.awt.Color(0, 0, 0));
+
+        jSeparator1.setBackground(new java.awt.Color(51, 51, 51));
+        jSeparator1.setForeground(new java.awt.Color(102, 102, 102));
+
+        jSeparator2.setBackground(new java.awt.Color(51, 51, 51));
+        jSeparator2.setForeground(new java.awt.Color(102, 102, 102));
 
         btnLogin.setBackground(new java.awt.Color(51, 51, 51));
         btnLogin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
