@@ -8,7 +8,7 @@ public class Controladora {
     ControladoraPersistencia persis = new ControladoraPersistencia();
 
     public String validarUsuario(String usuario, String contra) {
-        String mensaje = "";
+        String mensaje = "Base de datos vacía";
         for (Usuario user : listarUsuarios()) {
             if (user.getNombreUsuario().equals(usuario)){
                 if (user.getContrasenia().equals(contra)) {
