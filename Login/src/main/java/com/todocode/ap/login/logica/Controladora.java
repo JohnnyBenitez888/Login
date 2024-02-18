@@ -10,10 +10,10 @@ public class Controladora {
     public String validarUsuario(String usuario, String contra) {
         String mensaje = "Base de datos vacía";
         for (Usuario user : listarUsuarios()) {
-            if (user.getNombreUsuario().equals(usuario)){
+            if (user.getNombreUsuario().equals(usuario)) {
                 if (user.getContrasenia().equals(contra)) {
                     mensaje = "Usuario y Contraseña correctos. Bienvenido/a " + user.getNombreUsuario();
-                }else{
+                } else {
                     mensaje = "Contraseña Incorrecta";
                 }
             } else {
