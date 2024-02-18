@@ -13,8 +13,10 @@ public class Controladora {
             if (user.getNombreUsuario().equals(usuario)) {
                 if (user.getContrasenia().equals(contra)) {
                     mensaje = "Usuario y Contraseña correctos. Bienvenido/a " + user.getNombreUsuario();
+                    break;
                 } else {
                     mensaje = "Contraseña Incorrecta";
+                    break;
                 }
             } else {
                 mensaje = "Usuario no encontrado";
